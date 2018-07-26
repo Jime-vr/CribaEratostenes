@@ -3,6 +3,8 @@ package com.cenfotec.criba.test;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+
 import org.junit.*;
 
 import com.cenfotec.criba.CribaEratostenes;
@@ -42,12 +44,12 @@ public class CribaTest {
 		assertEquals(168, primosCriba.length);
 	}
 	
-	@Test(expected=NullPointerException.class)
+	@Test
 	public void enviarNumeroMenor2() {
 		
 		primosCriba = criba.generaCriba(1);
 		
-		assertEquals(1, primosCriba[0]);
+		assertEquals("[]", Arrays.toString(primosCriba));
 	}
 
 }
